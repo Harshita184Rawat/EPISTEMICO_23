@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Background with Fixed Text</title>
+    <link href='https://fonts.googleapis.com/css?family=Ruslan Display' rel='stylesheet'>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-image: url(./images/homepage_background.jpg);
+            font-family: 'Ruslan Display';
+            display: flex;
+        }
+
+        .container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 800px;
+            z-index: -1;
+            margin-left: 25%;
+            
+        }
+
+        .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 100px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 4px rgb(71, 177, 203), 4px 4px 6px gold;
+            letter-spacing: -15px;
+        }
+
+        .text span {
+        position: relative;
+        display: inline-block;
+        text-transform: uppercase;
+        animation: flip 2s infinite;
+        animation-delay: calc(.10s * var(--i))
+        }
+        @keyframes flip {
+        0%,80% {
+            transform: rotateY(360deg) 
+        }
+        }
+
+    
+    
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="background" src="./images/circular_logo.png" alt="background">
+        <div class="text">
+            <span style="--i:1">E</span>
+            <span style="--i:2">P</span>
+            <span style="--i:3">I</span>
+            <span style="--i:4">S</span>
+            <span style="--i:5">T</span>
+            <span style="--i:6">E</span>
+            <span style="--i:7">M</span>
+            <span style="--i:8">I</span>
+            <span style="--i:9">C</span>
+            <span style="--i:10">O</span>
+        </div>
+    </div>
+
+    <script>
+        const background = document.querySelector('.background');
+        let rotation = 0;
+
+        function rotateBackground() {
+            rotation += 0.5;
+            background.style.transform = `rotate(${rotation}deg)`;
+            requestAnimationFrame(rotateBackground);
+        }
+
+        rotateBackground();
+    </script>
+</body>
+</html>

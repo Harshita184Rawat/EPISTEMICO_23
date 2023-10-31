@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epistemico</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,500;0,600;0,700;0,900;0,1000;1,900;1,1000&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <div class="nav-links">
+                <i class="fa fa-times"></i>
+                <ul>
+                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="events.html" >EVENTS</a></li>
+                    
+                    <li><a href="#contacts">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars"></i>
+        </nav>
+        <div class="text-box">
+            <img src="images/EPISTEMICO-logos_white.png" alt="logo">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus repellat rerum <br> Quibusdam vel debitis qui consequatur nemo obcaecati repellat rerum neque placeat laborum, <br>commodi adipisci natus doloribus odit rem!</p>
+            <a href="#about" class="hero-btn">ABOUT THE THEME</a>
+        
+        </div>
+    </section>
+    <section id="about">
+        
+        <div class="about container">
+            <div>
+           
+        </div>
+        </div>
+        
+        
+    </section>
+   
+    
+       
+
+  
+    
+    <section id="contacts"></section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function() {
+                    window.location.hash = hash;
+                });
+            }
+        });
+    });
+</script>
+
+    
+</body>
+</html>
