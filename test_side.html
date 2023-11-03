@@ -22,7 +22,7 @@
         }
 
         .container {
-            position: relative;
+            position: absolute;
             width: 100vw;
             height: 100vh;
             overflow: hidden;
@@ -36,6 +36,7 @@
             width: 700px;
             z-index: -1;
             margin-left: 28%;
+            display: flex;
             
         }
 
@@ -66,14 +67,18 @@
 
         #button-go{
             margin-left: 640px;
-            margin-top:680px ;
+            margin-top:670px ;
             font-size: 40px;
             transition: transform .2s;
             font-family: 'Ruslan Display';
             color:rgb(91, 133, 229);
-
+            border-radius: 50px;
+            padding: 10px 20px;
             animation: beat .500s infinite alternate;
 	        transform-origin: center;
+            background-color: silver;
+            border-radius: solid 2px rgb(110, 108, 108)
+            ;
         }
 
         @keyframes beat{
@@ -93,19 +98,10 @@
     <div class="container">
         <img class="background" src="./images/circular_logo.png" alt="background">
         <div class="text">
-            <span style="--i:1">E</span>
-            <span style="--i:2">P</span>
-            <span style="--i:3">I</span>
-            <span style="--i:4">S</span>
-            <span style="--i:5">T</span>
-            <span style="--i:6">E</span>
-            <span style="--i:7">M</span>
-            <span style="--i:8">I</span>
-            <span style="--i:9">C</span>
-            <span style="--i:10">O</span>
+            <img style="background-color: black; border-radius:30px;" src="./images/epis_canva_text_img.png" alt="">
         </div>
 
-        <button id="button-go">Genesis Onset</button>
+        <button id="button-go" >Genesis Onset</button>
 
 
     </div>
