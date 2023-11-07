@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events</title>
-    <link rel="shortcut icon" href="./images/logoWithoutText.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="Events.css">
+    <link rel="shortcut icon" href="./images/circular_logo.png" type="image/x-icon">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,19 +15,59 @@
 </head>
 
 <body>
-  <div id="Top-section" style="background-image: url(images/e82a6600b9ff3fce7f89c7fa39cdb3b9-transformed\ \(1\).jpeg.jpg); background-repeat:no-repeat;background-size: cover;width: 100vw;
-  height: 100vh;; ">
+  <div id="Top-section" style="background-image: url(backgroundlogo.jpg); background-repeat:no-repeat;background-size: cover;width: 100vw;
+  height: 100vh;; background-color: black; box-shadow:0px 0px 20px 10px black inset;" >
+  <!--NAVIGATION BAR-->
+  <nav>
+    <div class="nav-links">
+        <i class="fa fa-times"></i>
+        <ul>
+            <li><a href="index.html"><img src="./images/home_canva_text.png" alt=""></a></li>
+            <li><a href="about.html"><img src="./images/about_canva_text.png" alt=""></a></li>
+            <li><a href="events.html"><img src="./images/events_canva_text.png" alt=""></a></li>
+            <li><a href="team.html"><img src="./images/team-canva_text.png" alt=""></a></li>
+            <li><a href="#"><img src="./images/contact-canva_text.png" alt=""></a></li>
+            
+
+        </ul>
+    </div>
+    <i class="fa fa-bars"></i>
+</nav>
     <section>
         <div id="Head-block">
-            <h1 id="event-heading">EPISTEMICO'23</h1>
-            <h2 id="genesis-subheading" >Genesis</h2>
+    
         <div>  
-        <h2 id="line-desc">Events and Competitions</h2>
-        <h2 id="date">7<sup>th</sup>&nbsp;- 8<sup>th</sup>&nbsp;November</h2>
-        <button id="reg-button"><a href="#" id="reg-button-text"><b>Register for Events</b></a></button>
+       
+        <button id="reg-button"><a href="#" id="reg-button-text"><b>Register For Events</b></a></button>
     </section>
   </div>
-  <h1 id="card-container-title">All Events</h1>
+  <div class="events-section" style="background-image: url(5.png); background-repeat: no-repeat; background-size: cover;">
+    
+
+<div id="highlights">
+    <img id="card-container-title" src="Screenshot_2.png">
+    <div class="w3-content w3-display-container" style="max-width:800px">
+        <img class="mySlides" src="dance.jpg">
+        <img class="mySlides" src="dance2.jpg">
+        <img class="mySlides" src="dance3.jpg">
+        <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+            <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+            <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+            <div class="w3-indicator-container">
+              <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+              <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+              <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+            </div>
+          </div>
+          
+</div>
+<div>
+    <br>
+    <br>
+  <img id="card-container-title" src="Screenshot_3.png" >
+
+  </div>
+
   <!--Events Cards-->
 
   <div id="event-cards-container" style="margin-left: 100px;margin-right:100px;">
@@ -205,9 +245,62 @@
     
         </div>  
     </div>
+
+    <div class="main-card">
+        <div class="upper-image" style="background-image:url(./images/logoWithoutText.png);">
+            <div class="event-title">DANCE</div>
+        </div>
+    
+        <div class="lower-box">
+            <div class="event-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In vitae animi minus doloribus possimus recusandae dolorum consectetur, quisquam tenetur, quae quos id earum ab esse a voluptatem totam unde. Facilis!</div>
+    
+        </div>  
+    </div>
+
+    <div class="main-card">
+        <div class="upper-image" style="background-image:url(./images/logoWithoutText.png);">
+            <div class="event-title">DANCE</div>
+        </div>
+    
+        <div class="lower-box">
+            <div class="event-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In vitae animi minus doloribus possimus recusandae dolorum consectetur, quisquam tenetur, quae quos id earum ab esse a voluptatem totam unde. Facilis!</div>
+    
+        </div>  
+    </div>
       
   </div>
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
     
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+    
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+    
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-white", "");
+      }
+      x[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " w3-white";
+    }
+    // Automatically advance the slide every 3 seconds
+var slideInterval = setInterval(function() {
+  plusDivs(1);
+}, 5000);
+    </script>
 </body>
 
 </html>

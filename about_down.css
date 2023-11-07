@@ -1,0 +1,71 @@
+* {
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+section {
+    height: 80px;
+    width: 100%;
+}
+
+section img {
+    margin: 0%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    filter: brightness(100%);
+}
+
+.overlay {
+    position: fixed;
+    height: 100px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    padding: 35px 0px 0px 0px;
+    text-align: center;
+    filter: brightness(120%);
+}
+
+/*------- Slider css -------*/
+.back img {
+    display: flex;
+    float: left;
+    flex-direction: column;
+}
+
+.mySlides {
+    display: none;
+}
+
+.display-container {
+    position: absolute;
+    height: 500px;
+    width: 1100px;
+    margin: 165px 30px 3px 190px;
+    box-shadow: 0 0 70px 10px #EAC696;
+}
+
+.display-left {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 507px;
+    opacity: 1;
+    background-color: #EAC696;
+}
+
+.display-right {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    height: 507px;
+    /* border: none; */
+    right: 0%;
+    background-color: #EAC696;
+}
